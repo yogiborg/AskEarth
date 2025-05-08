@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conversational Earth AI</title>
+    <style>
+      body {
+        font-family: 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background-color: #fcfcfc;
+        color: #222;
+      }
+    
+      h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+    
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+    
+      input[type="text"] {
+        flex: 1;
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        min-width: 280px;
+      }
+    
+      button {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        border: none;
+        background-color: #4D9DE0;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+    
+      button:hover {
+        background-color: #2e83c4;
+      }
+    
+      #resultBox {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+    
+      #map {
+        height: 500px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Ask Earth 🌍</h1>
+
+    <form id="questionForm">
+      <input type="text" id="questionInput" placeholder="Ask a question..." size="50" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="map"></div>
+
+    <script src="openai.js"></script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2pt311sigFIhrHksLTIl00ZSEQXjr7rw&callback=initMap" async defer></script>
+  </body>
+</html>
