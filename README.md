@@ -1,4 +1,5 @@
-# Ask Earth 🌍
+# EarthMind🌍
+# Ask the Earth anything 
 
 > Ask questions about the world — this AI map shows you where and why, with satellite views and smart captions.
 
